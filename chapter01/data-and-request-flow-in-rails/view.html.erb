@@ -1,0 +1,17 @@
+<!-- This is how you add a single-line comment in a view html.erb file -->
+
+<!-- products/index.html.erb -->
+<!-- This is the view file for displaying a list of products -->
+
+<h1>Product Listing</h1>
+<!-- Display a heading for the product listing -->
+
+<ul>
+  <% @products.each do |product| %>
+    <!-- Loop through each product in the @products instance variable -->
+    
+    <li><%= product.name %> - <%= number_to_currency(product.price) %></li>
+    <!-- Display each product's name and price -->
+  <% end %>
+</ul>
+<!-- End of product listing -->
